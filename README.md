@@ -72,7 +72,7 @@ A Substrate-based blockchain node that supports custom pallets for carbon credit
 
 ## Hackathon Highlights
 
-During the Polkadot North America Hackathon 2024, our team focused on several key enhancements:
+During the Polkadot North America Hackathon 2024, our team focused on several key enhancements, of which several were unfinished and we were able to keep pushing them:
 
 1. **NFT Retirements:** Automated CO2 token burns and issuance of retirement credits with certificates stored on IPFS.
 2. **Foresta Collectives Pallet:** Enabled voting and management within DAO structures as Foresta Collectives.
@@ -97,7 +97,7 @@ Refer to individual subdirectories for detailed installation and setup instructi
 
 ## Contributors and Acknowledgments
 
-This project is made possible by the dedication and expertise of our team members and the support from the Polkadot ecosystem, particularly the insights gained from the Polkadot North America Hackathon 2024 workshops, special mentions to Josep Garcés and Kasper Mai Joergensen for their availability for mentorship sessions were we polished our final pitch. Special thanks to Encode Club, Phala Network, Shad/cn, Bitgreen, SIWS, Astar Network, Ink!athon, Apillon and Tanssi for their telegram/github/discord support and foundational technologies that will enable the next-gen of Web3 innovation and the future of Appchains on coretime.
+This project is made possible by the dedication and expertise of our team members and the support from the Polkadot ecosystem, particularly the insights gained from the Polkadot North America Hackathon 2024 workshops and the IRL EasyA Hackathon. Special thanks to The Blockspace HQs, Web Zero DevRel team, Phala Network, Shad/cn, Bitgreen, SIWS, Astar Network, Ink!athon, Apillon,the one and only Talisman, Vercel, basement studio and Tanssi <3 for their telegram/github/discord support and foundational technologies that will enable the next-gen of Web3 innovation and the future of Appchains on coretime.
 
 ## Project Development Branches and Transparency
 
