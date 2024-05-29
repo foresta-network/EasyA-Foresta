@@ -36,10 +36,13 @@ Each implementation has a dedicated README with test instructions and an overall
 - **XCM enabled - Atomic Carbon Retirements** Leverages XCM for seamless and atomic retirement of carbon credits, ensuring an efficient and secure process.
 - **Stripe Payment Gateway** Integrates Stripe to facilitate easy and secure payments for carbon credits.
 
-## Key Hacakthon Development Features
+## Key Hackathon Development Features
 
 **AI Environmental Auditor**
 Our AI agent, powered by Phala AI, acts as an environmental auditor for carbon credit projects listed on Foresta. The AI agent performs comprehensive audits, providing real-time analysis and reports to ensure transparency and prevent greenwashing by querying project information and collective governance information from carbon credit projects on the blockchain. This is achieved through a combination of secure data processing and advanced AI algorithms orchestration based on AI Agents compute deployment via Phala.
+
+**Compute Exxxecution Environment with Schrodinger NFTs** 
+Utilizes Phala Network's secure TEE compute environments to ensure privacy and integrity in algorithm execution by leveraging IP and 'Run Execute' NFTs for.
 
 **Stripe Integration**
 We have integrated Stripe as our payment gateway, allowing users to purchase carbon credits seamlessly. Stripe provides a secure and user-friendly interface for handling payments, ensuring a smooth transaction process for all users.
