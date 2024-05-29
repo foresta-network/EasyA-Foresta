@@ -1,4 +1,4 @@
-# Foresta Protocol Proof of Concept | Polkadot North America Hackathon 2024 entry
+# Foresta Protocol Proof of Concept | EasyA Hackathon Polkadot entry
 
 ![Foresta Banner](media/band_image.png)
 
