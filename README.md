@@ -45,7 +45,7 @@ Our AI agent, powered by Phala AI, acts as an environmental auditor for carbon c
 We have integrated Stripe as our payment gateway, allowing users to purchase carbon credits seamlessly. Stripe provides a secure and user-friendly interface for handling payments, ensuring a smooth transaction process for all users.
 
 **XCM Enabled - Atomic Carbon Retirements**
-Using Cross-Consensus Messaging (XCM), we enable atomic carbon credit retirements, ensuring that the retirement process is efficient and secure as 'donations'. This is based on the Sequester common-good pallet which enables any blockchain to add a fee to their own tx as an additional fee for instant carbon credit retirements from community-based natural resource management carbon projects. This feature allows for seamless interoperability between different blockchain networks creating demand for carbon credit's in a seamless fintech enabled way, providing a robust and reliable solution for managing carbon credits.
+Using Cross-Consensus Messaging (XCM), we enable atomic carbon credit retirements, ensuring that the retirement process is efficient and secure as 'donations'. This is based on the Sequester common-good pallet which was based on Off-chain workers but we enable it's usage through Acurast instead enablling any XCM compatible blockchain to add a fee to their own tx and business logic as an additional structure fee for instant carbon credit retirements from community-based natural resource management carbon projects. This feature allows for seamless interoperability between different blockchain networks creating demand for carbon credit's in a seamless fintech enabled way, providing a robust and reliable solution for managing carbon credits.
 
 
 ## Technical Documentation
