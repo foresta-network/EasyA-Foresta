@@ -32,6 +32,20 @@ Each implementation has a dedicated README with test instructions and an overall
 - **Decentralized Exchanges (DEX):** Facilitates trading of carbon credits using modern financial tools embedded within our platform.
 - **KYC Integration and Governance:** Ensures compliance with global standards and enables community-driven governance through decentralized voting.
 - **Secure Algorithm Execution:** Utilizes Phala Network's secure compute environments to ensure privacy and integrity in algorithm execution.
+- **AI environmental auditor** An AI agent that audits carbon credit projects, providing detailed analyses and reports to increase transparency and prevent greenwashing.
+- **XCM enabled - Atomic Carbon Retirements** Leverages XCM for seamless and atomic retirement of carbon credits, ensuring an efficient and secure process.
+- **Stripe Payment Gateway** Integrates Stripe to facilitate easy and secure payments for carbon credits.
+
+## Key Hacakthon Development Features
+
+**AI Environmental Auditor**
+Our AI agent, powered by Phala AI, acts as an environmental auditor for carbon credit projects listed on Foresta. The AI agent performs comprehensive audits, providing real-time analysis and reports to ensure transparency and prevent greenwashing by querying project information and collective governance information from carbon credit projects on the blockchain. This is achieved through a combination of secure data processing and advanced AI algorithms orchestration based on AI Agents compute deployment via Phala.
+
+**Stripe Integration**
+We have integrated Stripe as our payment gateway, allowing users to purchase carbon credits seamlessly. Stripe provides a secure and user-friendly interface for handling payments, ensuring a smooth transaction process for all users.
+
+**XCM Enabled - Atomic Carbon Retirements**
+Using Cross-Consensus Messaging (XCM), we enable atomic carbon credit retirements, ensuring that the retirement process is efficient and secure as 'donations'. This is based on the Sequester common-good pallet which enables any blockchain to add a fee to their own tx as an additional fee for instant carbon credit retirements from community-based natural resource management carbon projects. This feature allows for seamless interoperability between different blockchain networks creating demand for carbon credit's in a seamless fintech enabled way, providing a robust and reliable solution for managing carbon credits.
 
 
 ## Technical Documentation
@@ -114,9 +128,7 @@ The above branches have been consolidated into the present monolithic repository
 
 ## Project Disclaimer
 
-The architecture, business ideation, and initial pitch were extensively developed during Encode's Polkadot Hackathon just in March 2024. Despite the project's inception during the three-week event, significant architectural challenges were identified and subsequently addressed. The feedback and insights gained from the Encode Hackathon were invaluable as we were finalists but ultimately did not win any prize, enabling us to refine and expand our vision effectively with increased motivation to see this project's vision through and further develop. This project as presented is a culmination of ongoing efforts to innovate and enhance our solutions post-Encode Hackathon with the aim of obtaining further feedback towards applying for a Web3 Foundation grant to completely decentralize the protocol as we keep innovating and exploring possibilities.
-
-Next-steps are developing the compute-execute environment for NFT Algorithms for the Data Lake towards dMRV (Decentralized Measuring, Reporting and Verification) alognside data scientists at the AI + Environment EcoHackathon 2024 🛰️🍃[Hackathon Website](https://hack.biodivx.org/) in order for a chance to submit our project to Elon Musk's X prize while showing it to a larger community of Climate Scientist for further feedback and validation towards iteration of our project's approach.
+The architecture, business ideation, and initial pitch were extensively developed during Polkadot North America Hackathon just in May 2024. Despite the project's inception during the three-week event, significant architectural challenges were identified and subsequently addressed. The feedback and insights gained from the Hackathon were invaluable as we are currently finalists in the Smart Contract track and will be pitching live in DotSocial 2024 during Consensus 2024. This project as presented is a culmination of ongoing efforts to innovate and enhance our solutions post-Encode Hackathon with the aim of obtaining further feedback towards applying for a Web3 Foundation grant to completely decentralize the protocol as we keep innovating and exploring possibilities.
 
 ---
 🌍 [Visit our website](https://www.foresta.network) | 🐦 Coming Soon |
