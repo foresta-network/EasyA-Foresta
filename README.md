@@ -54,7 +54,7 @@ Using Cross-Consensus Messaging (XCM), we enable atomic carbon credit retirement
 
 ### [Foresta Front-end Application](#foresta-front-end-application)
 
-Built with Next.js, designed for seamless interaction with the blockchain, facilitating a robust platform for Natural Reserve's community governance, KYC verification, carbon credit trading, and Data Lake access to auditng, monitoring and verification.
+Built with Next.js, designed for seamless interaction with the blockchain, facilitating a robust platform for Natural Reserve's community governance, KYC verification, carbon credit trading, and Data Lake access to auditing, monitoring and verification.
 
 [View Documentation](foresta-front-end/README.md)
 
