@@ -1,0 +1,8 @@
+[workspace]
+members = [
+    "foresta-contracts/algo-store",
+    "foresta-contracts/execute",
+    "foresta-contracts/phala-contract",
+]
+
+resolver = "2"

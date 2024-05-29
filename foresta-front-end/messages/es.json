@@ -1,0 +1,32 @@
+{
+  "IndexPage": {
+    "title": "¡Hola mundo!",
+    "description": "Créditos de carbono blockchain verificados por monitoreo satélital.",
+    "connectWalletButtonText": "Conecta tu Billetera",
+    "carbonButtonRoute": "Comprar Créditos de Carbono"
+  },
+  "NotFoundPage": {
+    "title": "Página no encontrada",
+    "description": "¡Ups! Parece que has encontrado una página que no existe. No te preocupes, nuestra magia de internacionalización sigue trabajando duro en otras partes de la aplicación. ¡Siéntete libre de navegar hacia atrás para explorar más!"
+  },
+  "Navigation": {
+    "home": "Inicio"
+  },
+  "Marketplace": {
+    "marketplaceTitle": "MARKETPLACE DE CRÉDITOS DE CARBONO",
+    "governanceTitle": "GOBERNANZA BASADA EN LA COMUNIDAD",
+    "button": "Comprar Créditos",
+    "title": "Compra Créditos de Carbono",
+    "description": "Selecciona la cantidad de créditos de carbono para comprar y retirar.",
+    "decrease": "Disminuir cantidad",
+    "credits": "Créditos",
+    "increase": "Aumentar cantidad",
+    "confirm": "Confirmar compra",
+    "cancel": "Cancelar",
+    "loading": "Cargando..."
+
+  },
+  "Footer": {
+    "copyright": "© 2024 Foresta. Todos los derechos reservados."
+  }
+}

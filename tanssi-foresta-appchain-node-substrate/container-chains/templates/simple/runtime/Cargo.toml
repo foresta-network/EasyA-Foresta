@@ -1,0 +1,266 @@
+[package]
+name = "container-chain-template-simple-runtime"
+authors = { workspace = true }
+description = "Simple container chain template runtime"
+edition = "2021"
+license = "GPL-3.0-only"
+version = "0.1.0"
+
+[package.metadata.docs.rs]
+targets = [ "x86_64-unknown-linux-gnu" ]
+
+[dependencies]
+hex-literal = { workspace = true, optional = true }
+log = { workspace = true }
+parity-scale-codec = { workspace = true, features = [ "derive" ] }
+scale-info = { workspace = true, features = [ "derive" ] }
+serde = { workspace = true, optional = true, features = [ "derive" ] }
+smallvec = { workspace = true }
+getrandom = {workspace = true}
+
+# Local
+pallet-cc-authorities-noting = { workspace = true }
+tp-consensus = { workspace = true }
+
+# Moonkit
+nimbus-primitives = { workspace = true }
+pallet-async-backing = { workspace = true }
+pallet-author-inherent = { workspace = true }
+pallet-maintenance-mode = { workspace = true, features = [ "xcm-support" ] }
+pallet-migrations = { workspace = true }
+xcm-primitives = { workspace = true }
+
+# Substrate
+frame-executive = { workspace = true }
+frame-support = { workspace = true }
+frame-system = { workspace = true }
+frame-system-rpc-runtime-api = { workspace = true }
+pallet-balances = { workspace = true }
+pallet-membership = { workspace = true }
+pallet-proxy = { workspace = true }
+pallet-preimage = { workspace = true }
+pallet-root-testing = { workspace = true }
+pallet-scheduler = { workspace = true }
+pallet-session = { workspace = true }
+pallet-sudo = { workspace = true }
+pallet-timestamp = { workspace = true }
+pallet-transaction-payment = { workspace = true }
+pallet-transaction-payment-rpc-runtime-api = { workspace = true }
+pallet-treasury = { workspace = true }
+pallet-tx-pause = { workspace = true }
+pallet-utility = { workspace = true }
+sp-api = { workspace = true }
+sp-block-builder = { workspace = true }
+sp-consensus-aura = { workspace = true }
+sp-consensus-slots = { workspace = true }
+sp-core = { workspace = true }
+sp-debug-derive = { workspace = true }
+sp-inherents = { workspace = true }
+sp-offchain = { workspace = true }
+sp-runtime = { workspace = true }
+sp-session = { workspace = true }
+sp-std = { workspace = true }
+sp-transaction-pool = { workspace = true }
+sp-trie = { workspace = true }
+
+sp-version = { workspace = true }
+
+# Polkadot
+pallet-xcm = { workspace = true }
+polkadot-parachain-primitives = { workspace = true }
+polkadot-runtime-common = { workspace = true }
+staging-xcm = { workspace = true }
+staging-xcm-builder = { workspace = true }
+staging-xcm-executor = { workspace = true }
+
+# Cumulus
+cumulus-pallet-dmp-queue = { workspace = true }
+cumulus-pallet-parachain-system = { workspace = true }
+cumulus-pallet-session-benchmarking = { workspace = true }
+cumulus-pallet-xcm = { workspace = true }
+cumulus-pallet-xcmp-queue = { workspace = true }
+cumulus-primitives-core = { workspace = true }
+cumulus-primitives-timestamp = { workspace = true }
+cumulus-primitives-utility = { workspace = true }
+parachain-info = { workspace = true }
+
+# Benchmarking
+frame-benchmarking = { workspace = true, optional = true }
+frame-system-benchmarking = { workspace = true, optional = true }
+frame-try-runtime = { workspace = true, optional = true }
+
+# New pallet add-ons
+	# Substrate
+pallet-assets = { workspace = true }
+pallet-uniques = { workspace = true }
+
+	# Custom Pallets
+pallet-carbon-credits = { workspace = true }
+pallet-carbon-credits-pool = { workspace = true }
+pallet-dex = { workspace = true }
+pallet-kyc = { workspace = true }
+pallet-general-storage = { workspace = true }
+pallet-foresta-collectives = { workspace = true }
+orml-tokens = { workspace = true }
+orml-traits = { workspace = true }
+pallet-acurast-fulfillment-receiver = { git = "https://github.com/Acurast/acurast-core.git", default-features = false, branch = "staging/polkadot-v1.1.0" }
+acurast-p256-crypto = { git = "https://github.com/Acurast/acurast-core.git", default-features = false, branch = "staging/polkadot-v1.1.0" }
+
+
+# Local Dependencies
+primitives = { package = "foresta-primitives", path = "../../../../primitives/btg_primitives", default-features = false }
+
+
+[build-dependencies]
+substrate-wasm-builder = { workspace = true }
+
+[features]
+default = [ "std" ]
+std = [
+	"cumulus-pallet-dmp-queue/std",
+	"cumulus-pallet-parachain-system/std",
+	"cumulus-pallet-session-benchmarking/std",
+	"cumulus-pallet-xcm/std",
+	"cumulus-pallet-xcmp-queue/std",
+	"cumulus-primitives-core/std",
+	"cumulus-primitives-timestamp/std",
+	"cumulus-primitives-utility/std",
+	"frame-benchmarking?/std",
+	"frame-executive/std",
+	"frame-support/std",
+	"frame-system-benchmarking?/std",
+	"frame-system-rpc-runtime-api/std",
+	"frame-system/std",
+	"frame-try-runtime/std",
+	"log/std",
+	"nimbus-primitives/std",
+	"pallet-async-backing/std",
+	"pallet-author-inherent/std",
+	"pallet-balances/std",
+	"pallet-cc-authorities-noting/std",
+	"pallet-maintenance-mode/std",
+	"pallet-membership/std",
+	"pallet-migrations/std",
+	"pallet-proxy/std",
+	"pallet-preimage/std",
+	"pallet-root-testing/std",
+	"pallet-scheduler/std",
+	"pallet-session/std",
+	"pallet-sudo/std",
+	"pallet-timestamp/std",
+	"pallet-transaction-payment-rpc-runtime-api/std",
+	"pallet-transaction-payment/std",
+	"pallet-treasury/std",
+	"pallet-tx-pause/std",
+	"pallet-utility/std",
+	"pallet-xcm/std",
+	"parachain-info/std",
+	"parity-scale-codec/std",
+	"polkadot-parachain-primitives/std",
+	"polkadot-runtime-common/std",
+	"scale-info/std",
+	"serde",
+	"serde?/std",
+	"sp-api/std",
+	"sp-block-builder/std",
+	"sp-consensus-aura/std",
+	"sp-consensus-slots/std",
+	"sp-core/std",
+	"sp-debug-derive/std",
+	"sp-inherents/std",
+	"sp-offchain/std",
+	"sp-runtime/std",
+	"sp-session/std",
+	"sp-std/std",
+	"sp-transaction-pool/std",
+	"sp-trie/std",
+	"sp-version/std",
+	"staging-xcm-builder/std",
+	"staging-xcm-executor/std",
+	"staging-xcm/std",
+	"tp-consensus/std",
+	"xcm-primitives/std",
+	"pallet-assets/std",
+	"pallet-uniques/std",
+	"pallet-carbon-credits/std",
+	"pallet-carbon-credits-pool/std",
+	"pallet-dex/std",
+	"pallet-kyc/std",
+	"pallet-general-storage/std",
+	"pallet-foresta-collectives/std",
+	"orml-tokens/std",
+	"orml-traits/std",
+	"pallet-acurast-fulfillment-receiver/std",
+	"acurast-p256-crypto/std",
+]
+
+# Allow to print logs details (no wasm:stripped)
+force-debug = [ "sp-debug-derive/force-debug" ]
+
+runtime-benchmarks = [
+	"cumulus-pallet-parachain-system/runtime-benchmarks",
+	"cumulus-pallet-session-benchmarking/runtime-benchmarks",
+	"cumulus-pallet-xcmp-queue/runtime-benchmarks",
+	"cumulus-primitives-utility/runtime-benchmarks",
+	"frame-benchmarking",
+	"frame-benchmarking/runtime-benchmarks",
+	"frame-support/runtime-benchmarks",
+	"frame-system-benchmarking/runtime-benchmarks",
+	"frame-system/runtime-benchmarks",
+	"hex-literal",
+	"nimbus-primitives/runtime-benchmarks",
+	"pallet-author-inherent/runtime-benchmarks",
+	"pallet-balances/runtime-benchmarks",
+	"pallet-cc-authorities-noting/runtime-benchmarks",
+	"pallet-migrations/runtime-benchmarks",
+	"pallet-proxy/runtime-benchmarks",
+	"pallet-preimage/runtime-benchmarks",
+	"pallet-sudo/runtime-benchmarks",
+	"pallet-timestamp/runtime-benchmarks",
+	"pallet-tx-pause/runtime-benchmarks",
+	"pallet-utility/runtime-benchmarks",
+	"pallet-xcm/runtime-benchmarks",
+	"polkadot-parachain-primitives/runtime-benchmarks",
+	"polkadot-runtime-common/runtime-benchmarks",
+	"sp-runtime/runtime-benchmarks",
+	"staging-xcm-builder/runtime-benchmarks",
+	"staging-xcm-executor/runtime-benchmarks",
+	"xcm-primitives/runtime-benchmarks",
+	"pallet-assets/runtime-benchmarks",
+	"pallet-uniques/runtime-benchmarks",
+	"pallet-foresta-collectives/runtime-benchmarks",
+
+]
+
+try-runtime = [
+	"cumulus-pallet-dmp-queue/try-runtime",
+	"cumulus-pallet-parachain-system/try-runtime",
+	"cumulus-pallet-xcm/try-runtime",
+	"cumulus-pallet-xcmp-queue/try-runtime",
+	"frame-executive/try-runtime",
+	"frame-support/try-runtime",
+	"frame-system/try-runtime",
+	"frame-try-runtime",
+	"frame-try-runtime/try-runtime",
+	"nimbus-primitives/try-runtime",
+	"pallet-author-inherent/try-runtime",
+	"pallet-balances/try-runtime",
+	"pallet-cc-authorities-noting/try-runtime",
+	"pallet-maintenance-mode/try-runtime",
+	"pallet-migrations/try-runtime",
+	"pallet-proxy/try-runtime",
+	"pallet-preimage/try-runtime",
+	"pallet-root-testing/try-runtime",
+	"pallet-session/try-runtime",
+	"pallet-sudo/try-runtime",
+	"pallet-timestamp/try-runtime",
+	"pallet-transaction-payment/try-runtime",
+	"pallet-tx-pause/try-runtime",
+	"pallet-utility/try-runtime",
+	"pallet-xcm/try-runtime",
+	"parachain-info/try-runtime",
+	"polkadot-runtime-common/try-runtime",
+	"sp-runtime/try-runtime",
+	"pallet-assets/try-runtime",
+	"pallet-uniques/try-runtime",
+]
