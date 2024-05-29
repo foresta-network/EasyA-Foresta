@@ -1,4 +1,4 @@
-# Foresta Protocol Proof of Concept | Polkadot North America Hackathon 2024 entry
+# Foresta Protocol Proof of Concept | EasyA Hackathon Polkadot entry
 
 ![Foresta Banner](media/band_image.png)
 
@@ -36,16 +36,19 @@ Each implementation has a dedicated README with test instructions and an overall
 - **XCM enabled - Atomic Carbon Retirements** Leverages XCM for seamless and atomic retirement of carbon credits, ensuring an efficient and secure process.
 - **Stripe Payment Gateway** Integrates Stripe to facilitate easy and secure payments for carbon credits.
 
-## Key Hacakthon Development Features
+## Key Hackathon Development Features
 
 **AI Environmental Auditor**
 Our AI agent, powered by Phala AI, acts as an environmental auditor for carbon credit projects listed on Foresta. The AI agent performs comprehensive audits, providing real-time analysis and reports to ensure transparency and prevent greenwashing by querying project information and collective governance information from carbon credit projects on the blockchain. This is achieved through a combination of secure data processing and advanced AI algorithms orchestration based on AI Agents compute deployment via Phala.
+
+**Compute Exxxecution Environment with Schrodinger NFTs** 
+Utilizes Phala Network's secure TEE compute environments to ensure privacy and integrity in algorithm execution by leveraging IP and 'Run Execute' NFTs for.
 
 **Stripe Integration**
 We have integrated Stripe as our payment gateway, allowing users to purchase carbon credits seamlessly. Stripe provides a secure and user-friendly interface for handling payments, ensuring a smooth transaction process for all users.
 
 **XCM Enabled - Atomic Carbon Retirements**
-Using Cross-Consensus Messaging (XCM), we enable atomic carbon credit retirements, ensuring that the retirement process is efficient and secure as 'donations'. This is based on the Sequester common-good pallet which enables any blockchain to add a fee to their own tx as an additional fee for instant carbon credit retirements from community-based natural resource management carbon projects. This feature allows for seamless interoperability between different blockchain networks creating demand for carbon credit's in a seamless fintech enabled way, providing a robust and reliable solution for managing carbon credits.
+Using Cross-Consensus Messaging (XCM), we enable atomic carbon credit retirements, ensuring that the retirement process is efficient and secure as 'donations'. This is based on the Sequester common-good pallet which was based on Off-chain workers but we enable it's usage through Acurast instead enablling any XCM compatible blockchain to add a fee to their own tx and business logic as an additional structure fee for instant carbon credit retirements from community-based natural resource management carbon projects. This feature allows for seamless interoperability between different blockchain networks creating demand for carbon credit's in a seamless fintech enabled way, providing a robust and reliable solution for managing carbon credits.
 
 
 ## Technical Documentation
@@ -54,7 +57,7 @@ Using Cross-Consensus Messaging (XCM), we enable atomic carbon credit retirement
 
 ### [Foresta Front-end Application](#foresta-front-end-application)
 
-Built with Next.js, designed for seamless interaction with the blockchain, facilitating a robust platform for Natural Reserve's community governance, KYC verification, carbon credit trading, and Data Lake access to auditng, monitoring and verification.
+Built with Next.js, designed for seamless interaction with the blockchain, facilitating a robust platform for Natural Reserve's community governance, KYC verification, carbon credit trading, and Data Lake access to auditing, monitoring and verification.
 
 [View Documentation](foresta-front-end/README.md)
 
@@ -72,7 +75,7 @@ A Substrate-based blockchain node that supports custom pallets for carbon credit
 
 ## Hackathon Highlights
 
-During the Polkadot North America Hackathon 2024, our team focused on several key enhancements:
+During the Polkadot North America Hackathon 2024, our team focused on several key enhancements, of which several were unfinished and we were able to keep pushing them:
 
 1. **NFT Retirements:** Automated CO2 token burns and issuance of retirement credits with certificates stored on IPFS.
 2. **Foresta Collectives Pallet:** Enabled voting and management within DAO structures as Foresta Collectives.
@@ -97,7 +100,7 @@ Refer to individual subdirectories for detailed installation and setup instructi
 
 ## Contributors and Acknowledgments
 
-This project is made possible by the dedication and expertise of our team members and the support from the Polkadot ecosystem, particularly the insights gained from the Polkadot North America Hackathon 2024 workshops, special mentions to Josep Garcés and Kasper Mai Joergensen for their availability for mentorship sessions were we polished our final pitch. Special thanks to Encode Club, Phala Network, Shad/cn, Bitgreen, SIWS, Astar Network, Ink!athon, Apillon and Tanssi for their telegram/github/discord support and foundational technologies that will enable the next-gen of Web3 innovation and the future of Appchains on coretime.
+This project is made possible by the dedication and expertise of our team members and the support from the Polkadot ecosystem, particularly the insights gained from the Polkadot North America Hackathon 2024 workshops and the IRL EasyA Hackathon. Special thanks to The Blockspace HQs, Web Zero DevRel team, Phala Network, Shad/cn, Bitgreen, SIWS, Astar Network, Ink!athon, Apillon,the one and only Talisman, Vercel, basement studio and Tanssi <3 for their telegram/github/discord support and foundational technologies that will enable the next-gen of Web3 innovation and the future of Appchains on coretime.
 
 ## Project Development Branches and Transparency
 
