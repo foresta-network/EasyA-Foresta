@@ -194,10 +194,10 @@ function ResponsesFeature({ className }: FeatureClassProps) {
           <DatabaseIcon className="w-8 h-8 text-gray-900 dark:text-white" />
           <div className="grid gap-1">
             <CardTitle className="text-gray-900 dark:text-white">
-              Compute Environment Integration
+              AI Carbon Credit Auditing
             </CardTitle>
             <CardDescription className="text-gray-600 dark:text-gray-400">
-              Integrate a secure, sandboxed compute environment
+              Audit foresta carbon credit projects with our AI toolkit.
             </CardDescription>
           </div>
         </CardHeader>
@@ -237,29 +237,25 @@ function ResponsesFeature({ className }: FeatureClassProps) {
           </FeatureCardThumbnail>
 
           <FeatureCardBody>
-            <FeatureCardTitle> Decentralized Compute Network</FeatureCardTitle>
+            <FeatureCardTitle> Environmental Auditing</FeatureCardTitle>
             <FeatureCardDescription>
-              Integrate a secure, sandboxed compute environment Connect to the
-              decentralized compute network
+              Perform data and climate science analysis on projects listed on Foresta running deep research on available blockchain public data on carbon credit projects listed on Foresta across a project's lifecycle.
             </FeatureCardDescription>
             <div className="grid gap-2 py-3">
               <CardTitle className="text-gray-900 dark:text-white pt-4">
-                Latest dataset uploads
+                AI Models supported
               </CardTitle>
             </div>
 
             <FeatureCardDescription>
-              <div className="text-sm font-semibold text-gray-900 dark:text-white">
-                Compute Network Connection
-              </div>
               <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                 <div className="flex items-center gap-1">
                   <Airplay className="w-4 h-4 text-gray-600 dark:text-gray-400" />
-                  <span>Login</span>
+                  <span>GPT-4-0</span>
                 </div>
                 <div className="flex items-center gap-1">
                   <Bird className="w-4 h-4 text-gray-600 dark:text-gray-400" />
-                  <span>Setup</span>
+                  <span>GPT-3.5-turbo</span>
                 </div>
               </div>
             </FeatureCardDescription>
@@ -267,12 +263,12 @@ function ResponsesFeature({ className }: FeatureClassProps) {
         </CardContent>
         <CardFooter className="flex justify-center gap-4 p-4">
           <Link
-            href={`/${locale}/dashboard/data-lake/data-nft-gallery`}
+            href={`/${locale}/dashboard/data-lake/ai-auditor`}
             passHref
           >
             <Button className="bg-gray-900 hover:bg-gray-800 text-white font-semibold py-2 px-4 rounded-md shadow-md">
               <BrainCircuit size={32} />
-              Connect Network
+              Audit Projects
             </Button>
           </Link>
         </CardFooter>

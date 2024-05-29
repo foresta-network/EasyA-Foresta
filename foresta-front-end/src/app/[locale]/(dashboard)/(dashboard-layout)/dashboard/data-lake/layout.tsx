@@ -5,10 +5,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import {
   Database,
-  FileText,
-  Users,
-  Wallet,
-  Server,
+  Bot,
   Terminal,
   Cpu,
   BrainCircuit,
@@ -71,8 +68,13 @@ const navItems = [
     ],
   },
   {
-    title: "Execution & Compute",
+    title: "AI/ML Compute",
     children: [
+      {
+        title: "Environmental Auditor",
+        href: "/ai-auditor",
+        icon: <Bot size={32} />,
+      },
       {
         title: "Algorithm Execution",
         href: "/algorithm-execution",
