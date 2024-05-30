@@ -29,7 +29,6 @@ export class ExecuteController {
         },
       }),
       fileFilter: (req, file, cb) => {
-        console.log(file);
         if (extname(file.originalname) !== '.ipynb') {
           return cb(
             new BadRequestException('Only .ipynb files are allowed'),
