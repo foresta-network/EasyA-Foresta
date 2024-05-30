@@ -251,7 +251,11 @@ function ResponsesFeature({ className }: FeatureClassProps) {
               <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                 <div className="flex items-center gap-1">
                   <Airplay className="w-4 h-4 text-gray-600 dark:text-gray-400" />
-                  <span>GPT-4-0</span>
+                  <span>GPT-4o</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <Bird className="w-4 h-4 text-gray-600 dark:text-gray-400" />
+                  <span>GPT-4</span>
                 </div>
                 <div className="flex items-center gap-1">
                   <Bird className="w-4 h-4 text-gray-600 dark:text-gray-400" />

@@ -79,8 +79,8 @@ export function AiAuditInterface({
                   <legend className="-ml-1 px-1 text-sm font-medium">
                     Settings
                   </legend>
-                  <div className="grid gap-3">
-                    <Label htmlFor="model">AI Model</Label>
+               
+                  <Label htmlFor="model">AI Model</Label>
                     <Select
                       onValueChange={(value) => setSelectedModel(value)}
                       value={selectedModel}
@@ -140,33 +140,6 @@ export function AiAuditInterface({
                         </SelectItem>
                       </SelectContent>
                     </Select>
-                  </div>
-                  <div className="grid gap-3">
-                    <Select>
-                      <SelectTrigger
-                        id="projects"
-                        className="items-start [&_[data-description]]:hidden"
-                      ></SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="genesis">
-                          <div className="flex items-start gap-3 text-muted-foreground">
-                            <Rabbit className="size-5" />
-                            <div className="grid gap-0.5">
-                              <p>
-                                Neural{" "}
-                                <span className="font-medium text-foreground">
-                                  Genesis
-                                </span>
-                              </p>
-                              <p className="text-xs" data-description>
-                                Our fastest model for general use cases.
-                              </p>
-                            </div>
-                          </div>
-                        </SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
                   <div className="relative flex h-full min-h-[50vh] flex-col rounded-xl bg-muted/50 p-4 lg:col-span-2">
                     <div className="grid gap-3">
                       <Select>

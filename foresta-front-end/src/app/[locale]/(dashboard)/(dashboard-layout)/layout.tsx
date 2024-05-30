@@ -3,6 +3,7 @@ import SideMenu from "@/components/dashboard/SideMenu";
 import Navbar from "@/components/dashboard/navbar";
 import SideMenuSkeleton from "@/components/dashboard/Skeleton/SideMenuSkeleton";
 import { Toaster } from "@/components/ui/toaster";
+import { AI } from "@/components/ai/actions"
 
 interface DashboardLayoutProps {
   children: React.ReactNode;
@@ -17,7 +18,9 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
       <div className="flex flex-col flex-1 overflow-hidden">
         <Navbar />
         <main className="flex flex-col h-full overflow-hidden">
+          <AI>
           {children}
+          </AI>
         </main>
         <Toaster />
       </div>

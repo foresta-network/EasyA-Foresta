@@ -49,7 +49,7 @@ export async function continueConversation(
         generate: async function* ({ project, dataset }) {
           yield <div>Loading report...</div>;
           const report = await generateObject({
-            model: openai("gpt-4o"),
+            model: openai('gpt-4o'),
             schema: auditReportSchema,
             prompt: `Generate an environmental audit report for project ${project} using dataset ${dataset}.`,
           });
