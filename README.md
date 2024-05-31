@@ -38,7 +38,7 @@ Each implementation has a dedicated README with test instructions and an overall
 ## Key Hackathon Development Features
 
 **AI Environmental Auditor**
-Our AI agent, powered by Phala AI, acts as an environmental auditor for carbon credit projects listed on Foresta. The AI agent performs comprehensive audits, providing real-time analysis and reports to ensure transparency and prevent greenwashing by querying project information and collective governance information from carbon credit projects on the blockchain. This is achieved through a combination of secure data processing and advanced AI algorithms orchestration based on AI Agents compute deployment via Phala.
+Our AI agent, powered by Phala AI, acts as an environmental auditor for carbon credit projects listed on Foresta. The AI agent performs comprehensive audits, providing real-time analysis and reports to ensure transparency and prevent greenwashing by querying project information and collective governance information from carbon credit projects on the blockchain. This is achieved through a combination of secure data processing and advanced AI algorithms orchestration based on AI Agents compute deployment via Phala after following thßis base tutorial and integrating to chatbot using Vercel's ai sdk 🖥️ [Website](https://docs.phala.network/ai-agent-contract/getting-started/build-your-ai-agent-contract-with-openai)
 Additionaly, we implement a RAG chatbot architecture (Retrieval Augmented Generation). RAG is a powerful tool that combines the benefits of retrieval-based models and generative models. Unlike traditional chatbots that can struggle with maintaining up-to-date information or accessing domain-specific knowledge, a RAG-based chatbot uses a knowledge base created from crawled URLs to provide contextually relevant responses. We crawl project information from carbon credit projects in the foresta-node-runtime in order to get up to date information on the current state of the project, similarly, we can crawl governance info and any blockchain-based info to run our chatbot with live context data as a tool leveraging blockchain api queries.
 
 **Compute Execution Environment with Schrodinger NFTs** 
@@ -62,6 +62,7 @@ Leveraging the Robonomics platform, we created a smart contracts to manage and t
 Built with Next.js, designed for seamless interaction with the blockchain, facilitating a robust platform for Natural Reserve's community governance, KYC verification, carbon credit trading, and Data Lake access to auditing, monitoring and verification.
 
 [View Documentation](foresta-front-end/README.md)
+![Phala OpenAi Integration](media/phala-agent-deployment.png)
 
 ### [Foresta Contracts](#foresta-contracts)
 
