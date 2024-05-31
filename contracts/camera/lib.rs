@@ -40,19 +40,6 @@ mod camera {
         }
 
         #[ink(message)]
-        pub fn fulfill(&mut self, values: Vec<(u128, u128)>) -> Result<()> {
-            if !self.allow_list.contains(self.env().caller()) {
-                return Err(Error::CallerNotInAllowList);
-            }
-
-            for (key, value) in values {
-                self.species_count.insert(key, &value);
-            }
-
-            Ok(())
-        }
-
-        #[ink(message)]
         pub fn increment(&mut self, species_id: u128) -> Result<()> {
             if !self.allow_list.contains(self.env().caller()) {
                 return Err(Error::CallerNotInAllowList);
@@ -127,15 +114,6 @@ mod camera {
             assert_eq!(camera.get_species_count(Default::default()), None);
         }
 
-        /// We test a simple use case of our contract.
-        #[ink::test]
-        fn it_works() {
-            let mut camera = Camera::new(None);
-            assert_eq!(camera.get_species_count(Default::default()), None);
-            camera.allow(AccountId::from([1; 32])).expect("can allow account");
-            camera.fulfill(vec![(0, 10)]).expect("fulfill works");
-            assert_eq!(camera.get_species_count(0), Some(10));
-        }
 
         #[ink::test]
         fn increment_works() {
