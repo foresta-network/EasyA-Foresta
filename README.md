@@ -88,38 +88,11 @@ Refer to individual subdirectories for detailed installation and setup instructi
 
 ## Contributors and Acknowledgments
 
-This project is made possible by the dedication and expertise of our team members and the support from the Polkadot ecosystem, particularly the insights gained from the Polkadot North America Hackathon 2024 workshops and the IRL EasyA Hackathon. Special thanks to The Blockspace HQs, Web Zero DevRel team, Phala Network, Shad/cn, Bitgreen, SIWS, Astar Network, Ink!athon, Apillon,the one and only Talisman, Vercel, basement studio and Tanssi <3 for their telegram/github/discord support and foundational technologies that will enable the next-gen of Web3 innovation and the future of Appchains on coretime.
-
-## Project Development Branches and Transparency
-
-To ensure complete transparency and convenience for judges and stakeholders, we outline below the key branches from our public repositories. These branches represent significant stages and features of our project development. By sharing these details, we enable the verification of Git histories to validate the continuity and integrity of our development process.
-
-### RMRK Execute Compute Storage Smart Contracts
-
-- **Branch: `new-architecture-integration`**
-  - This branch is pivotal for integrating a new architecture inspired by the RMRK nested NFTs smart contracts, focusing on robust solutions for execution, computing, and storage needs. It forms the backbone of our secure and efficient backend logic that interacts with the blockchain.
-
-### Foresta Tanssi Node
-
-- **Branch: `development`**
-  - Serving as the main artery for our node's development, this branch contains all the latest enhancements, including advanced functionalities for carbon credit management with our unique approach and vision.
-  - [View Development Branch](https://github.com/tcxcx/tanssi-foresta/tree/development)
-
-- **Branch: `feature/project-collective-association`**
-  - Dedicated to refining the associations between conservation projects and natural reserve DAOs, this branch ensures effective management and collaboration within our platform.
-  - [View Feature Branch](https://github.com/tcxcx/tanssi-foresta/tree/feature/project-collective-association)
-
-### Foresta Front-End
-
-- **Branch: `development`**
-  - This branch hosts the ongoing enhancements to our user interface, focusing on user experience improvements, integration of new features, and ensuring the interface's performance and reliability.
-  - [View Front-End Development Branch](https://github.com/tcxcx/foresta-front-end/tree/development)
-
-The above branches have been consolidated into the present monolithic repository to streamline the review process and provide a single point of reference for all project components. This consolidation facilitates an easier and more comprehensive evaluation by judges, ensuring they can assess the full scope and scale of our project's evolution and current state with ease.
+This project is made possible by the dedication and expertise of our team members and the support from the Polkadot ecosystem, particularly the insights gained from the Polkadot North America Hackathon 2024 workshops and the IRL EasyA Hackathon happening in parallel during Consensus 2024. Special thanks to The Blockspace HQs, Web Zero DevRel team, Phala Network, Shad/cn, Bitgreen, SIWS, Astar Network, Ink!athon, Apillon,the one and only Talisman, Vercel, basement studio and Tanssi <3 for their telegram/github/discord support and foundational technologies and advice that will enable the next-gen of Web3 innovation and the future of Appchains on coretime.
 
 ## Project Disclaimer
 
-The architecture, business ideation, and initial pitch were extensively developed during Polkadot North America Hackathon just in May 2024. Despite the project's inception during the three-week event, significant architectural challenges were identified and subsequently addressed. The feedback and insights gained from the Hackathon were invaluable as we are currently finalists in the Smart Contract track and will be pitching live in DotSocial 2024 during Consensus 2024. This project as presented is a culmination of ongoing efforts to innovate and enhance our solutions post-Encode Hackathon with the aim of obtaining further feedback towards applying for a Web3 Foundation grant to completely decentralize the protocol as we keep innovating and exploring possibilities.
+The architecture, business ideation, and initial pitch were extensively developed during Polkadot North America Hackathon just in May 2024. Despite the project's inception during the four-week event, significant architectural challenges were identified and subsequently addressed. The feedback and insights gained from the Hackathon were invaluable as we are currently finalists in the Smart Contract track and will be pitching live in DotSocial 2024 during Consensus 2024. This project as presented is a culmination of ongoing efforts to innovate and enhance our solutions post-Hackathon with the aim of obtaining further feedback towards applying for a Web3 Foundation grant to completely decentralize the protocol as we keep innovating and exploring possibilities for carbon credit at the intersection of ReFi + RWA + DeSci.
 
 ---
 🌍 [Visit our website](https://www.foresta.network) | 🐦 Coming Soon |
