@@ -74,6 +74,8 @@ Ink! smart contracts managing Algorithm Storage NFTs (AS-NFTs) and Execution Acc
 
 A Substrate-based blockchain node that supports custom pallets for carbon credits, foresta-collectives as natural reserve DAOs, KYC, payments pallet for carbon credit sales and profit-sharing, and the DEX, ensuring comprehensive management of all platform operations.
 
+[Node Interaction Instructions](foresta-front-end/instructions-node-interactions.txt).
+
 [View Documentation](tanssi-foresta-appchain-node-substrate/container-chains/templates/simple/node/README.md)
 
 ## Installation and Setup
