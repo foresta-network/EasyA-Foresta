@@ -79,115 +79,7 @@ export function AiAuditInterface({
                   <legend className="-ml-1 px-1 text-sm font-medium">
                     Settings
                   </legend>
-               
                   <Label htmlFor="model">AI Model</Label>
-                    <Select
-                      onValueChange={(value) => setSelectedModel(value)}
-                      value={selectedModel}
-                    >
-                      <SelectTrigger
-                        id="model"
-                        className="items-start [&_[data-description]]:hidden"
-                      >
-                        <SelectValue placeholder="Select a model" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="gpt-4o">
-                          <div className="flex items-start gap-3 text-muted-foreground">
-                            <Rabbit className="size-5" />
-                            <div className="grid gap-0.5">
-                              <p>
-                                <span className="font-medium text-foreground">
-                                  GPT-4o
-                                </span>
-                              </p>
-                              <p className="text-xs" data-description>
-                                The most advanced OpenAI model.
-                              </p>
-                            </div>
-                          </div>
-                        </SelectItem>
-                        <SelectItem value="gpt-4">
-                          <div className="flex items-start gap-3 text-muted-foreground">
-                            <Bird className="size-5" />
-                            <div className="grid gap-0.5">
-                              <p>
-                                <span className="font-medium text-foreground">
-                                  GPT-4
-                                </span>
-                              </p>
-                              <p className="text-xs" data-description>
-                                Advanced GPT model.
-                              </p>
-                            </div>
-                          </div>
-                        </SelectItem>
-                        <SelectItem value="gpt-3.5-turbo">
-                          <div className="flex items-start gap-3 text-muted-foreground">
-                            <Turtle className="size-5" />
-                            <div className="grid gap-0.5">
-                              <p>
-                                <span className="font-medium text-foreground">
-                                  GPT 3.5 turbo
-                                </span>
-                              </p>
-                              <p className="text-xs" data-description>
-                                The fastest and cheapest model for complex
-                                computation analysis.
-                              </p>
-                            </div>
-                          </div>
-                        </SelectItem>
-                      </SelectContent>
-                    </Select>
-                  <div className="relative flex h-full min-h-[50vh] flex-col rounded-xl bg-muted/50 p-4 lg:col-span-2">
-                    <div className="grid gap-3">
-                      <Select>
-                        <SelectTrigger
-                          id="Dataset"
-                          className="items-start [&_[data-description]]:hidden"
-                        ></SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="genesis">
-                            <div className="flex items-start gap-3 text-muted-foreground">
-                              <Rabbit className="size-5" />
-                              <div className="grid gap-0.5">
-                                <p>
-                                  Neural{" "}
-                                  <span className="font-medium text-foreground">
-                                    Genesis
-                                  </span>
-                                </p>
-                                <p className="text-xs" data-description>
-                                  Our fastest model for general use cases.
-                                </p>
-                              </div>
-                            </div>
-                          </SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-                  </div>
-                </fieldset>
-                <fieldset className="grid gap-6 rounded-lg border p-4">
-                  <legend className="-ml-1 px-1 text-sm font-medium">
-                    Messages
-                  </legend>
-                  <div className="grid gap-3">
-                    <CardHeader>
-                      <CardTitle className="text-2xl">
-                        Give additional context to your auditor
-                      </CardTitle>
-                      <CardDescription>
-                        Give additional content prompts to your environmenal
-                        auditor to run the anaylis on this particular project
-                      </CardDescription>
-                    </CardHeader>
-                  </div>
-                  <div className="grid gap-3">
-                    <Label htmlFor="content">Content</Label>
-                    <Textarea id="content" placeholder="You are a..." />
-                  </div>
                 </fieldset>
               </form>
             </DrawerContent>
@@ -213,7 +105,10 @@ export function AiAuditInterface({
                 </legend>
                 <div className="grid gap-3">
                   <Label htmlFor="model">Model</Label>
-                  <Select>
+                  <Select
+                    onValueChange={(value) => setSelectedModel(value)}
+                    value={selectedModel}
+                  >
                     <SelectTrigger
                       id="model"
                       className="items-start [&_[data-description]]:hidden"
@@ -221,50 +116,48 @@ export function AiAuditInterface({
                       <SelectValue placeholder="Select a model" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="genesis">
+                      <SelectItem value="gpt-4o">
                         <div className="flex items-start gap-3 text-muted-foreground">
                           <Rabbit className="size-5" />
                           <div className="grid gap-0.5">
                             <p>
-                              Neural{" "}
                               <span className="font-medium text-foreground">
-                                Genesis
+                                GPT-4o
                               </span>
                             </p>
                             <p className="text-xs" data-description>
-                              Our fastest model for general use cases.
+                              The most advanced OpenAI model.
                             </p>
                           </div>
                         </div>
                       </SelectItem>
-                      <SelectItem value="explorer">
+                      <SelectItem value="gpt-4">
                         <div className="flex items-start gap-3 text-muted-foreground">
                           <Bird className="size-5" />
                           <div className="grid gap-0.5">
                             <p>
-                              Neural{" "}
                               <span className="font-medium text-foreground">
-                                Explorer
+                                GPT-4
                               </span>
                             </p>
                             <p className="text-xs" data-description>
-                              Performance and speed for efficiency.
+                              Advanced GPT model.
                             </p>
                           </div>
                         </div>
                       </SelectItem>
-                      <SelectItem value="quantum">
+                      <SelectItem value="gpt-3.5-turbo">
                         <div className="flex items-start gap-3 text-muted-foreground">
                           <Turtle className="size-5" />
                           <div className="grid gap-0.5">
                             <p>
-                              Neural{" "}
                               <span className="font-medium text-foreground">
-                                Quantum
+                                GPT 3.5 turbo
                               </span>
                             </p>
                             <p className="text-xs" data-description>
-                              The most powerful model for complex computations.
+                              The fastest and cheapest model for complex
+                              computation analysis.
                             </p>
                           </div>
                         </div>
@@ -273,16 +166,16 @@ export function AiAuditInterface({
                   </Select>
                 </div>
                 <div className="grid gap-3">
-                  <Label htmlFor="temperature">Temperature</Label>
+                  <Label htmlFor="temperature">Project</Label>
                   <Input id="temperature" type="number" placeholder="0.4" />
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="grid gap-3">
-                    <Label htmlFor="top-p">Top P</Label>
+                    <Label htmlFor="top-p">Dataset</Label>
                     <Input id="top-p" type="number" placeholder="0.7" />
                   </div>
                   <div className="grid gap-3">
-                    <Label htmlFor="top-k">Top K</Label>
+                    <Label htmlFor="top-k">Tools</Label>
                     <Input id="top-k" type="number" placeholder="0.0" />
                   </div>
                 </div>
@@ -320,12 +213,14 @@ export function AiAuditInterface({
               Output
             </Badge>
             <div className="flex-1 overflow-auto">
-              {conversation.map((message) => (
-                <div key={message.id} className="mb-4">
-                  <strong>{message.role}:</strong>
-                  <div>{message.display}</div>
-                </div>
-              ))}
+              <div className="h-full overflow-y-auto">
+                {conversation.map((message) => (
+                  <div key={message.id} className="mb-4">
+                    <strong>{message.role}:</strong>
+                    <div>{message.display}</div>
+                  </div>
+                ))}
+              </div>
             </div>
             <form
               className="relative overflow-hidden rounded-lg border bg-background focus-within:ring-1 focus-within:ring-ring"

@@ -10,7 +10,7 @@ export default function AiDashboard() {
   const [input, setInput] = useState<string>("");
   const [conversation, setConversation] = useUIState<typeof AI>();
   const { continueConversation } = useActions();
-  const [selectedModel, setSelectedModel] = useState<string>("gpt-4");
+  const [selectedModel, setSelectedModel] = useState<string>("gpt-4o");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

@@ -45,12 +45,14 @@ Additionaly, we implement a RAG chatbot architecture (Retrieval Augmented Genera
 **Compute Exxxecution Environment with Schrodinger NFTs** 
 Utilizes Phala Network's secure TEE compute environments to ensure privacy and integrity in algorithm execution by leveraging IP and 'Run Execute' NFTs for.
 
-**Stripe Integration**
-We have integrated Stripe as our payment gateway, allowing users to purchase carbon credits seamlessly. Stripe provides a secure and user-friendly interface for handling payments, ensuring a smooth transaction process for all users.
+**Talisman Bounty**
+Implemented a custom log-in user story based on Talisman's SIWS repo or 🪬 [Sign-in with Substrate repo](https://github.com/TalismanSociety/siws) with add-on such as detecting the wallet providers the user has available, secure nonce signing with JWT tokens, and a cool three JS animation and dedicated UI. The SIWS logic flow allows the application to be managing user sessions and auth entirely on the client side using api next.js server functions making a decentralized log in with substrate user story with sign ins and outs for user's session stored on the client side.
 
 **XCM Enabled - Atomic Carbon Retirements**
 Using Cross-Consensus Messaging (XCM), we enable atomic carbon credit retirements, ensuring that the retirement process is efficient and secure as 'donations'. This is based on the Sequester common-good pallet which was based on Off-chain workers but we enable it's usage through Acurast instead enablling any XCM compatible blockchain to add a fee to their own tx and business logic as an additional structure fee for instant carbon credit retirements from community-based natural resource management carbon projects. This feature allows for seamless interoperability between different blockchain networks creating demand for carbon credit's in a seamless fintech enabled way, providing a robust and reliable solution for managing carbon credits.
 
+**Robonomics-integration experiment**
+Leveraging the Robonomics platform, we created a smart contracts to manage and trigger environmental camera systems on demand. This includes the ability to turn on 'trap cameras' in natural reserves to monitor wildlife and gather environmental data. The integration allows for the collection of snapshots and small video clips which can be analyzed using AI for species identification, contributing to a decentralized science database of wildlife spottings and a climate-science verification method for biodiversity. This approach enhances transparency and real-time monitoring capabilities for environmental projects.
 
 ## Technical Documentation
 
@@ -64,30 +66,16 @@ Built with Next.js, designed for seamless interaction with the blockchain, facil
 
 ### [Foresta Contracts](#foresta-contracts)
 
-Ink! smart contracts managing Algorithm Storage NFTs (AS-NFTs) and Execution Access NFTs (EA-NFTs), enabling secure and decentralized algorithm management.
+Ink! smart contracts managing Algorithm Storage NFTs (AS-NFTs) and Execution Access NFTs (EA-NFTs), enabling secure and decentralized algorithm management. Ink Robonomics smart contract included in separate folder.
 
 [View Documentation](rmrk-execute-compute-storage-smart-contracts/README.md)
+![Phala Schroedinger Instance](media/phala-contract-instance.png)
 
 ### [Foresta Node](#foresta-node)
 
 A Substrate-based blockchain node that supports custom pallets for carbon credits, foresta-collectives as natural reserve DAOs, KYC, payments pallet for carbon credit sales and profit-sharing, and the DEX, ensuring comprehensive management of all platform operations.
 
 [View Documentation](tanssi-foresta-appchain-node-substrate/container-chains/templates/simple/node/README.md)
-
-## Hackathon Highlights
-
-During the Polkadot North America Hackathon 2024, our team focused on several key enhancements, of which several were unfinished and we were able to keep pushing them:
-
-1. **NFT Retirements:** Automated CO2 token burns and issuance of retirement credits with certificates stored on IPFS.
-2. **Foresta Collectives Pallet:** Enabled voting and management within DAO structures as Foresta Collectives.
-3. **KYC Verification:** Integrated KYC Levels processes to enhance security, clearance based access to features, and future decentralized compliance around DIDs.
-4. **Sign-in Options:** Implemented SIWS and Kilt DID for secure and flexible user authentication flow's.
-5. **Payment Logic:** Enhanced our DEX to support transactions using USDC, USDT, and liquid carbon credits as shared revenue from these assets for Data Lake.
-6. **Schrodinger NFTs:** Developed secure NFTs for managing proprietary IP in algorithms and datasets as Schrodinger NFTs.
-7. **Compute-Execute Environment:** Leveraged Phala's TEE for secure execution of proprietary algorithms.
-8. **Carbon Credit Trading Engine:** Enhanced trading functionalities with liquidity pools and trading platform actions.
-9. **Chain-spec Launch:** Successfully launched on Tanssi's testnet, demonstrating our technology's readiness and scalability based on Tanssi's infrastructure.
-10. **Marketplace:** Project submission, approval and minting from carbon credit registries on chain with marketplace pages with on-chain carbon credit projects.
 
 ## Installation and Setup
 
