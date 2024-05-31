@@ -1,73 +1,78 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+#  Foresta Backend
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+##  Jupyter Notebook Execute
 
-## Description
+This project utilizes the Nest.js framework to create a backend service that accepts `.ipynb` (Jupyter Notebook) files through a REST API endpoint (POST /execute/upload). These files are then sent to an AWS Lambda function, which executes the notebook and returns the result as HTML. This setup simulates a decentralized compute environment, leveraging AWS as the current and temporary solution.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+##  How to Set Up and Run Backend
 
-## Installation
+1.  **Install Dependencies:**
 
 ```bash
 $ yarn install
 ```
 
-## Running the app
+or
 
 ```bash
-# development
-$ yarn run start
+$ npm install
+```
 
-# watch mode
+2.  **Environment Variables:**
+
+Create a `.env` file in the root directory and add the following variables (view .env.template for boilerplate):
+
+```
+AWS_REGION=<your-aws-region>
+AWS_ACCESS_KEY_ID=<your-access-key-id>
+AWS_SECRET_ACCESS_KEY=<your-secret-access-key>
+LAMBDA_FUNCTION_NAME=<your-lambda-function-name>
+```
+
+3.  **Running the Application:**
+
+- Development mode:
+
+```bash
 $ yarn run start:dev
-
-# production mode
-$ yarn run start:prod
 ```
 
-## Test
+##  How to Set Up AWS Lambda and Credentials
+
+1.  **AWS Credentials:**
+
+Ensure that your AWS credentials (`AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`) are set up in your environment or AWS credentials file.
+
+2.  **Lambda Function Setup:**
+
+- Navigate to the AWS Lambda console.
+- Create a new Lambda function and upload the generated `.zip` file.
+- Set the handler to `lambda_function.lambda_handler`.
+- Adjust the timeout and memory settings as needed.
+
+Refer to the [AWS Lambda Documentation](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html) for detailed instructions.
+
+##  How to Generate .zip File of Lambda
+
+You can generate the deployment package for the Lambda function using either a shell script or Docker:
+
+-  **Using Shell Script:**
+
+Run the `prepare-lambda.sh` script:
 
 ```bash
-# unit tests
-$ yarn run test
-
-# e2e tests
-$ yarn run test:e2e
-
-# test coverage
-$ yarn run test:cov
+$ ./lambda_function/prepare-lambda.sh
 ```
 
-## Support
+-  **Using Docker:**
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+Build and run the Docker container defined in the `Dockerfile`:
 
-## Stay in touch
+```bash
+$ docker build -t lambda-packager .
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+$ docker run --rm -v $(pwd):/out lambda-packager
+```
 
-## License
-
-Nest is [MIT licensed](LICENSE).
+This will create a `lambda_function.zip` file in the specified output directory, ready to be uploaded to AWS Lambda.
