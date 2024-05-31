@@ -1,0 +1,4 @@
+robonomics-interface
+substrate-interface>=1.2.5,<2
+requests
+pinata-python

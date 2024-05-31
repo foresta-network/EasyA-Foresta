@@ -40,7 +40,7 @@ mod camera {
         }
 
         #[ink(message)]
-        pub fn increment(&mut self, species_id: u128) -> Result<()> {
+        pub fn fulfill(&mut self, species_id: u128) -> Result<()> {
             if !self.allow_list.contains(self.env().caller()) {
                 return Err(Error::CallerNotInAllowList);
             }
@@ -116,13 +116,13 @@ mod camera {
 
 
         #[ink::test]
-        fn increment_works() {
+        fn fulfill_works() {
             let mut camera = Camera::new(None);
             assert_eq!(camera.get_species_count(Default::default()), None);
             camera.allow(AccountId::from([1; 32])).expect("can allow account");
-            camera.increment(0).expect("increment works");
+            camera.fulfill(0).expect("fulfill works");
             assert_eq!(camera.get_species_count(0), Some(1));
-            camera.increment(0).expect("increment works");
+            camera.fulfill(0).expect("fulfill works");
             assert_eq!(camera.get_species_count(0), Some(2));
         }
     }
