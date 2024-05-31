@@ -30,14 +30,37 @@ export async function continueConversation(
   const result = await streamUI({
     model: openai(selectedModel),
     messages: [...history.get(), { role: "user", content: input }],
-    text: ({ content, done }) => {
+    text: async ({ content, done }) => {
       if (done) {
         history.done((messages: ServerMessage[]) => [
           ...messages,
           { role: "assistant", content },
         ]);
       }
-      return <div>{content}</div>;
+    
+      const response = await fetch("https://agents.phala.network/ipfs/QmRkswy2fxnm1oukMtj5CFv2n9Rf5mtqLsAjKCk7p6wg28", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          method: "POST",
+          path: "ipfs://QmRkswy2fxnm1oukMtj5CFv2n9Rf5mtqLsAjKCk7p6wg28",
+          queries: {
+            chatQuery: [content],
+            openAiModel: [selectedModel],
+          },
+          secret: { openaiApiKey: process.env.OPENAI_API_KEY },
+          headers: {},
+        }),
+      });
+    
+      console.log("Response from Phala AI Agent:", response);
+    
+      const responseData = await response.json();
+      console.log("Response data from Phala AI Agent:", responseData);
+    
+      return <div dangerouslySetInnerHTML={{ __html: responseData.body }} />;
     },
     tools: {
       generateReport: {
