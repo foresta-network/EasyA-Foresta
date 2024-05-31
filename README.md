@@ -31,10 +31,9 @@ Each implementation has a dedicated README with test instructions and an overall
 - **Carbon Credit Lifecycle Management:** From issuance to retirement, enhanced by blockchain for transparency and security.
 - **Decentralized Exchanges (DEX):** Facilitates trading of carbon credits using modern financial tools embedded within our platform.
 - **KYC Integration and Governance:** Ensures compliance with global standards and enables community-driven governance through decentralized voting.
-- **Secure Algorithm Execution:** Utilizes Phala Network's secure compute environments to ensure privacy and integrity in algorithm execution.
+- **Secure Algorithm Execution:** Utilizes Phala Network's secure compute environments to ensure privacy and integrity in algorithm execution and sharing of proprietary code.
 - **AI environmental auditor** An AI agent that audits carbon credit projects, providing detailed analyses and reports to increase transparency and prevent greenwashing.
 - **XCM enabled - Atomic Carbon Retirements** Leverages XCM for seamless and atomic retirement of carbon credits, ensuring an efficient and secure process.
-- **Stripe Payment Gateway** Integrates Stripe to facilitate easy and secure payments for carbon credits.
 
 ## Key Hackathon Development Features
 
